@@ -1,46 +1,40 @@
 package com.sourceit.java.basic.bohuslavskyi.ht8;
 
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Launcher {
 	public static void main(String[] args) {
 		int id = 0;
 
-		Set<Worker> workers = new TreeSet<>(new Comparator<Worker>() {
-			public int compare(Worker a, Worker b) {
-				double diff = a.getAveragePayment() - b.getAveragePayment();
-				if (diff > 0.0)
-					return -1;
-				else if (diff < 0.0)
-					return 1;
-				else {
-					int n = a.getName().compareTo(b.getName());
-					return (n == 0) ? 1 : n;
-				}
-			}
-		});
+		ArrayList<Worker> worker = new ArrayList<Worker>();
 
-		workers.add(new FixPaymentWorker(++id, "Stewart Smith", 1000));
-		workers.add(new PerHourPaymentWorker(++id, "Morris Williams", 150));
-		workers.add(new FixPaymentWorker(++id, "Morgan Brown", 5000));
-		workers.add(new PerHourPaymentWorker(++id, "Howard Thompson", 150));
-		workers.add(new FixPaymentWorker(++id, "James Martin", 10000));
-		workers.add(new PerHourPaymentWorker(++id, "Foster Anderson", 200));
-		workers.add(new FixPaymentWorker(++id, "Kelly Robinson", 15000));
-		workers.add(new PerHourPaymentWorker(++id, "Murphy Allen", 250));
-		workers.add(new FixPaymentWorker(++id, "Ross Clark", 20000));
-		workers.add(new PerHourPaymentWorker(++id, "Coleman Scott", 300));
+		worker.add(new FixPaymentWorker(++id, "Stewart Smith", 1000));
+		worker.add(new PerHourPaymentWorker(++id, "Morris Williams", 150));
+		worker.add(new FixPaymentWorker(++id, "Morgan Brown", 5000));
+		worker.add(new PerHourPaymentWorker(++id, "Howard Thompson", 150));
+		worker.add(new FixPaymentWorker(++id, "James Martin", 10000));
+		worker.add(new PerHourPaymentWorker(++id, "Foster Anderson", 200));
+		worker.add(new FixPaymentWorker(++id, "Kelly Robinson", 15000));
+		worker.add(new PerHourPaymentWorker(++id, "Murphy Allen", 250));
+		worker.add(new FixPaymentWorker(++id, "Ross Clark", 20000));
+		worker.add(new PerHourPaymentWorker(++id, "Coleman Scott", 300));
 
-		Iterator<Worker> iterator = workers.iterator();		
-		while (iterator.hasNext()) {		
-			System.out.println(iterator.next());
+		System.out.println("All workers:");
+		Collections.sort(worker);
+
+		for (Worker w : worker) {
+			System.out.println(w);
 		}
-		
-		System.out.println("First worker:\n" + ((TreeSet<Worker>) workers).last());
-		System.out.println("Last worker:\n" + ((TreeSet<Worker>) workers).first());		
-		
+
+		System.out.println("First five worker's names:");
+		for (int i = 0; i < 5; i++) {
+			System.out.println(worker.get(i).getName());
+		}
+
+		System.out.println("Last three worker's id:");
+		for (int i = worker.size() - 3; i < worker.size(); i++) {
+			System.out.println(worker.get(i).getID());
+		}
 	}
 }
