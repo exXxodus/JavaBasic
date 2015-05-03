@@ -16,7 +16,7 @@ class SecondHumanAccount extends BankAccount {
 	public synchronized void credit(BigDecimal money) {
 		BigDecimal newBalance = balance.add(money);
 		balance = newBalance;
-		System.out.println("Получаем " + money + getCurrencyName() + ", на втором счету " + newBalance + getCurrencyName() + ".");
+		System.out.println("Receiving " + money + getCurrencyName() + ", current SecondHumanAccount balance - " + newBalance + getCurrencyName() + ".");
 	}
 	
 	public void credit(String money) {
@@ -30,7 +30,7 @@ class SecondHumanAccount extends BankAccount {
 			throw new NotEnoughMoneyException();
 		} else {
 			balance = newBalance;
-			System.out.println("Снимаем со второго счета " + money + getCurrencyName() + ", остаток на счету " + balance + getCurrencyName() + ".");
+			System.out.println("Withdrawing from second account " + money + getCurrencyName() + ", SecondHumanAccount balance after withdrawing - " + balance + getCurrencyName() + ".");
 		}
 	}
 
