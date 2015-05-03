@@ -2,9 +2,7 @@ package com.sourceit.java.basic.bohuslavskyi.lesson10.math;
 
 public class RevString {
 
-	public static void main(String[] args) {
-		
-		System.out.println();
+	public static void main(String[] args) {	
 
 		String s = args[0];
 
