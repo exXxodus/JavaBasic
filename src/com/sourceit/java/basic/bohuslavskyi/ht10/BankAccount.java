@@ -17,8 +17,8 @@ public abstract class BankAccount extends Bank {
 	
 	public void transferMoney() {}
 	
-	public void debit(BigDecimal money) {}
-	public void debit(String money) {}
+	public void debit(BigDecimal money) throws NotEnoughMoneyException {}
+	public void debit(String money) throws NotEnoughMoneyException {}
 	
 	public void credit(BigDecimal money) {}
 	public void credit(String money) {}
