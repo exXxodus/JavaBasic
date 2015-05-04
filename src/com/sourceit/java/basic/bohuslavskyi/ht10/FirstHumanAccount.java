@@ -15,7 +15,7 @@ class FirstHumanAccount extends BankAccount {
 
 	public synchronized void deposit(BigDecimal money) {
 		BigDecimal newBalance = balance.add(money);
-		System.out.println("Adding to first account " + money + getCurrencyName() + ", current FirstHumanAccount balance - " + newBalance + getCurrencyName() + ".");
+		System.out.println("Adding to first account " + money + getCurrencyName() + ", current " + owner + "'s balance - " + newBalance + getCurrencyName() + ".");
 		balance = newBalance;
 	}
 
@@ -32,7 +32,7 @@ class FirstHumanAccount extends BankAccount {
 	public synchronized void debit(BigDecimal money) {
 		BigDecimal newBalance = balance.subtract(money);
 		balance = newBalance;
-		System.out.println("Transfering " + money + getCurrencyName() + " to second account, FirstHumanAccount balance after transfer - " + newBalance + getCurrencyName() + ".");
+		System.out.println("Transfering " + money + getCurrencyName() + " to second account, " + owner + "'s balance after transfer - " + newBalance + getCurrencyName() + ".");
 	}
 	
 	public void debit(String money) {
@@ -44,6 +44,6 @@ class FirstHumanAccount extends BankAccount {
 	}
 
 	public String printBalance() {
-		return "FirstHumanAccount balance after all operations: " + getMoneyCount() + getCurrencyName() + ".";
+		return owner + "'s balance after all operations: " + getMoneyCount() + getCurrencyName() + ".";
 	}
 }
