@@ -11,7 +11,7 @@ class FirstHumanAccount extends BankAccount {
 	public FirstHumanAccount(BigDecimal balance, String owner) {
 		this.balance = balance;
 		this.owner = owner;
-	}
+	}	
 
 	public void deposit(BigDecimal money) {
 		BigDecimal newBalance = balance.add(money);
@@ -23,7 +23,7 @@ class FirstHumanAccount extends BankAccount {
 		deposit(new BigDecimal(money));
 	}
 
-	public void transferMoney(FirstHumanAccount fromAccount,
+	public void transferMoneyFromClientToClient(FirstHumanAccount fromAccount,
 			SecondHumanAccount toAccount, BigDecimal money) throws NotEnoughMoneyException {
 		fromAccount.debit(money);
 		toAccount.credit(money);
@@ -49,5 +49,9 @@ class FirstHumanAccount extends BankAccount {
 
 	public String printBalance() {
 		return owner + "'s balance after all operations: " + getMoneyCount() + getCurrencyName() + ".";
+	}
+
+	public String getCurrencyName() {
+		return "$";
 	}
 }

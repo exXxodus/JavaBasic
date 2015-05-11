@@ -45,4 +45,8 @@ class SecondHumanAccount extends BankAccount {
 	public String printBalance() {
 		return owner + "'s balance after all operations: " + getMoneyCount() + getCurrencyName() + ".";
 	}
+
+	public String getCurrencyName() {
+		return "$";
+	}
 }

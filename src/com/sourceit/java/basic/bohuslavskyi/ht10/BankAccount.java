@@ -2,10 +2,10 @@ package com.sourceit.java.basic.bohuslavskyi.ht10;
 
 import java.math.BigDecimal;
 
-public abstract class BankAccount extends Bank {
+public abstract class BankAccount {
 
-	public BigDecimal balance;
-	public String owner;	
+	protected BigDecimal balance;
+	protected String owner;	
 
 	public BankAccount() {}
 
@@ -26,4 +26,6 @@ public abstract class BankAccount extends Bank {
 	public abstract BigDecimal getMoneyCount();
 	
 	public abstract String printBalance();
+	
+	public abstract String getCurrencyName();
 }
