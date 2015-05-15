@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht7;
+package com.sourceit.java.basic.bohuslavskyi.ht07;
 
 import com.sourceit.exercise.IntArrays;
 

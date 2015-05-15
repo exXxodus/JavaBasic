@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht4;
+package com.sourceit.java.basic.bohuslavskyi.ht04;
 
 public class BubbleSort {
 

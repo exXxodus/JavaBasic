@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht1;
+package com.sourceit.java.basic.bohuslavskyi.ht01;
 
 public class JavaPlusMinus {
 

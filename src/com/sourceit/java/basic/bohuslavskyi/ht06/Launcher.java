@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht6;
+package com.sourceit.java.basic.bohuslavskyi.ht06;
 
 import java.io.BufferedReader;
 import java.io.IOException;

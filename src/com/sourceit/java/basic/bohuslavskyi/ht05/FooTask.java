@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht5;
+package com.sourceit.java.basic.bohuslavskyi.ht05;
 
 public class FooTask {
 

@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht3;
+package com.sourceit.java.basic.bohuslavskyi.ht03;
 
 import java.awt.*;
 

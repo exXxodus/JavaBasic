@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht2;
+package com.sourceit.java.basic.bohuslavskyi.ht02;
 
 import java.util.LinkedList;
 

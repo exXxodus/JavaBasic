@@ -1,4 +1,4 @@
-package com.sourceit.java.basic.bohuslavskyi.ht8;
+package com.sourceit.java.basic.bohuslavskyi.ht08;
 
 
 import java.util.ArrayList;
